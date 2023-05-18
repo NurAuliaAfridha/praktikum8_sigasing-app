@@ -14,5 +14,4 @@ if (isset($_GET['page'])) {
     }
 } else {
     include "pages/home.php";
-    include "pages/admin/lokasiread.php";
 }
