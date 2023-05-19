@@ -11,7 +11,40 @@ if(isset($_GET['id'])) {
     $stmt->execute();
     $row = $stmt->fetch();
     if (isset($row['id'])) {
-?>
+        if (isset($_POST['button_update'])) {
+
+            $database = new Database();
+            $db = $database->getConnection();
+        
+            $validateSQL = "SELECT * FROM lokasi WHERE nama_lokasi = ? AND id != ?";
+            $stmt = $db->prepare($validateSQL);
+            $stmt->bindParam(1, $_POST['nama_lokasi']);
+            $stmt->bindParam(2, $_POST['id']);
+            $stmt->execute();
+            if ($stmt->rowCount() > 0){
+        ?> 
+                <div class="alert alert-danger alery-dismissible">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+                    <h5><i class="icon fas fa-ban"></i>Gagal</h5>
+                    Nama lokasi sama sudah ada
+                </div>
+        <?php
+            } else {
+                $updateSQL = "UPDATE lokasi SET nama_lokasi = ? WHERE id = ?";
+                $stmt = $db->prepare($updateSQL);
+                $stmt->bindParam(1, $_POST['nama_lokasi']);
+                $stmt->bindParam(2, $_POST['id']);
+                if ($stmt->execute()) {
+                    $_SESSION['hasil'] = true;
+                    $_SESSION['pesan'] = "Berhasil ubah data";
+                } else {
+                    $_SESSION['hasil'] = false;
+                    $_SESSION['pesan'] = "Gagal ubah data";
+                }
+                echo "<meta http-equiv='refresh' content='0;url=?page=lokasiread'>";
+            }
+        }
+        ?>
 <section class="content-header">
     <div class="containerfluid">
         <div class="row mb2">
@@ -44,7 +77,7 @@ if(isset($_GET['id'])) {
                     <i class="fa fa-times"></i> Batal
                 </a>
                 <button type="submit" name="button_update" class="btn btn-success btn-sm float-right">
-                    <i class="fa fa-save"></i> Simpan
+                    <i class="fa fa-save"></i> ubah
                 </button>
             </form>
         </div>
