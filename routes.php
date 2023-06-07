@@ -6,6 +6,7 @@ if (isset($_GET['page'])) {
         case 'home':
             file_exists('pages/home.php') ? include 'pages/home.php' : include "pages/404.php";
             break;
+        //lokasi
         case 'lokasiread':
             file_exists('pages/admin/lokasiread.php') ? include 'pages/admin/lokasiread.php' : include "pages/404.php";
             break;
@@ -18,6 +19,82 @@ if (isset($_GET['page'])) {
         case 'lokasidelete':
             file_exists('pages/admin/lokasidelete.php') ? include 'pages/admin/lokasidelete.php' : include "pages/404.php";
             break;
+        //jabatan
+        case 'jabatanread':
+            file_exists('pages/admin/jabatanread.php') ? include 'pages/admin/jabatanread.php' : include "pages/404.php";
+            break;
+        case 'jabatancreate':
+            file_exists('pages/admin/jabatancreate.php') ? include 'pages/admin/jabatancreate.php' : include "pages/404.php";
+            break;
+        case 'jabatanupdate':
+            file_exists('pages/admin/jabatanupdate.php') ? include 'pages/admin/jabatanupdate.php' : include "pages/404.php";
+            break;
+        case 'jabatandelete':
+            file_exists('pages/admin/jabatandelete.php') ? include 'pages/admin/jabatandelete.php' : include "pages/404.php";
+            break;
+        //bagian
+        case 'bagianread':
+            file_exists('pages/admin/bagianread.php') ? include 'pages/admin/bagianread.php' : include "pages/404.php";
+            break;
+        case 'bagiancreate':
+            file_exists('pages/admin/bagiancreate.php') ? include 'pages/admin/bagiancreate.php' : include "pages/404.php";
+            break;
+        case 'bagianupdate':
+            file_exists('pages/admin/bagianupdate.php') ? include 'pages/admin/bagianupdate.php' : include "pages/404.php";
+            break;
+        case 'bagiandelete':
+            file_exists('pages/admin/bagiandelete.php') ? include 'pages/admin/bagiandelete.php' : include "pages/404.php";
+            break;
+        //karyawan
+        case 'karyawanread':
+            file_exists('pages/admin/karyawanread.php') ? include 'pages/admin/karyawanread.php' : include "pages/404.php";
+            break;
+        case 'karyawancreate':
+            file_exists('pages/admin/karyawancreate.php') ? include 'pages/admin/karyawancreate.php' : include "pages/404.php";
+            break;
+        case 'karyawanupdate':
+            file_exists('pages/admin/karyawanupdate.php') ? include 'pages/admin/karyawanupdate.php' : include "pages/404.php";
+            break;
+        case 'karyawandelete':
+            file_exists('pages/admin/karyawandelete.php') ? include 'pages/admin/karyawandelete.php' : include "pages/404.php";
+            break;
+        //
+        case 'karyawanbagian':
+            file_exists('pages/admin/karyawanbagian.php') ? include 'pages/admin/karyawanbagian.php' : include "pages/404.php";
+            break;
+        case 'karyawanjabatan':
+            file_exists('pages/admin/karyawanjabatan.php') ? include 'pages/admin/karyawanjabatan.php' : include "pages/404.php";
+            break;
+        //penggajian tahunan
+        case 'penggajianrekap':
+            file_exists('pages/admin/penggajianrekap.php') ? include 'pages/admin/penggajianrekap.php' : include "pages/404.php";
+            break;
+        case 'penggajianrekap-pdf':
+            file_exists('export/penggajianrekap-pdf.php') ? include 'export/penggajianrekap-pdf.php' : include "pages/404.php";
+            break; 
+        case 'penggajianrekap-res':
+            file_exists('export/res/penggajianrekap-res.php') ? include 'export/res/penggajianrekap-res.php' : include "pages/404.php";
+            break;  
+        //penggajian bulanan
+        case 'penggajianrekapbulan':
+            file_exists('pages/admin/penggajianrekapbulan.php') ? include 'pages/admin/penggajianrekapbulan.php' : include "pages/404.php";
+            break;
+        case 'penggajianrekapbulan-pdf':
+            file_exists('export/penggajianrekapbulan-pdf.php') ? include 'export/penggajianrekapbulan-pdf.php' : include "pages/404.php";
+            break; 
+        case 'penggajianrekapbulan-res':
+            file_exists('export/res/penggajianrekapbulan-res.php') ? include 'export/res/penggajianrekapbulan-res.php' : include "pages/404.php";
+            break;       
+        //penggajian karyawan
+        case 'penggajianrekapkaryawan':
+            file_exists('pages/admin/penggajianrekapkaryawan.php') ? include 'pages/admin/penggajianrekapkaryawan.php' : include "pages/404.php";
+            break;
+        case 'penggajianrekapkaryawan-pdf':
+            file_exists('export/penggajianrekapkaryawan-pdf.php') ? include 'export/penggajianrekapkaryawan-pdf.php' : include "pages/404.php";
+            break; 
+        case 'penggajianrekapkaryawan-res':
+            file_exists('export/res/penggajianrekapkaryawan-res.php') ? include 'export/res/penggajianrekapkaryawan-res.php' : include "pages/404.php";
+            break;  
         default:
             include "pages/404.php";
     }

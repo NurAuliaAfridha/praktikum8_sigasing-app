@@ -24,6 +24,33 @@
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-money-bill"></i>
+              <p>
+                Penggajian
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="?page=penggajianrekap" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  Rekap Gaji
+                </p>
+              </a>
+              </li>
+              <li class="nav-item">
+                <a href="?page=penggajianrekap" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>
+                  Riwayat Gaji
+                </p>
+              </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                   Master Data
@@ -38,19 +65,19 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="?page=jabatanread" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Jabatan</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="?page=bagianread" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Bagian</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="?page=karyawanread" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Karyawan</p>
                 </a>
